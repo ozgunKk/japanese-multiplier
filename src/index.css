@@ -1,0 +1,627 @@
+/* Key frames for the helpful animations about the process */
+@keyframes fadeInLines{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; 
+  }
+  20%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+@keyframes slideAndFadeInTens {
+  0% {
+    top: 39.1%;
+    left: 92%;
+    opacity: 0; 
+  }
+  10%{
+    top: 40.1%;
+    left: 92%;
+    opacity: 0;
+  }
+  40%{
+    top: 45%;
+    left: 48%;
+    opacity: 1;  
+  }
+  100% {
+    top: 45%;
+    left: 48%;
+    opacity: 1; 
+  }
+}
+@keyframes slideAndFadeInHundreds {
+  0% {
+    top: 38.4%;
+  left: 46.7%;
+    opacity: 0; 
+  }
+  10%{
+    top: 38.4%;
+    left: 46.7%;
+    opacity: 0;
+  }
+  40%{
+    top: 46.8%;
+    left: 1.6%;
+    opacity: 1;
+  }
+  100% {
+    top: 46.8%;
+    left: 1.6%;
+    opacity: 1; 
+  }
+}
+@keyframes onesToResult{
+  0%{
+    top: 43.1%;
+    left: 94%;
+    opacity: 0;
+  }
+  40%{
+    top: 43.1%;
+    left: 94%;
+    opacity: 0;
+  }
+  60%{
+    top: 50%;
+    left: 94%;
+    opacity: 0.9;
+  }
+  80%{
+    top: 87%;
+    left: 95.5%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 93%;
+    left: 95.5%;
+    opacity: 0;
+  }
+}
+@keyframes tensToResult{
+  0%{
+    top: 38.4%;
+    left: 47.7%;
+    opacity: 0;
+  }
+  40%{
+    top: 38.4%;
+    left: 47.7%;
+    opacity: 0;
+  }
+  60%{
+    top: 50%;
+    left: 47.7%;
+    opacity: 0.9;
+  }
+  80%{
+    top: 87%;
+    left: 92.8%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 93%;
+    left: 92.8%;
+    opacity: 0;
+  }
+}
+
+@keyframes hundredsToResult{
+  0%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0;
+  }
+  40%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0;
+  }
+  60%{
+    top: 50%;
+    left: 3%;
+    opacity: 0.9;
+  }
+  80%{
+    top: 87%;
+    left: 88.3%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 93%;
+    left: 88.3%;
+    opacity: 0;
+  }
+}
+@keyframes intersections-ones{
+  0%{
+    top: 39.5%;
+    left: 80%;
+    opacity: 0;
+  }
+  10%{
+    top: 39.5%;
+    left: 80%;
+    opacity: 0.9;
+  }
+  15%{
+    top: 39.5%;
+    left: 92%;
+    opacity: 0.9;
+  }
+  20%{
+    top: 39.5%;
+    left: 92%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 39.5%;
+    left: 92%;
+    opacity: 0;
+  }
+}
+  @keyframes intersections-hundreds{
+  0%{
+    top: 39.5%;
+    left: 17%;
+    opacity: 0;
+  }
+  10%{
+    top: 39.5%;
+    left: 17%;
+    opacity: 0.9;
+  }
+  15%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0.9;
+  }
+  20%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0;
+  }
+}
+@keyframes intersections-tens-bottom{
+  0%{
+    top: 71%;
+    left: 47%;
+    opacity: 0;
+  }
+  10%{
+    top: 71%;
+    left: 47%;
+    opacity: 0.9;
+  }
+  30%{
+    top: 43%;
+    left: 47%;
+    opacity: 0;
+  }
+  100%{
+    top: 43%; 
+    left: 47%;
+    opacity: 0;
+  }
+}
+@keyframes intersections-tens-top{
+  0%{
+    top: 7%;
+    left: 47%;
+    opacity: 0;
+  }
+  10%{
+    top: 7%;
+    left: 47%;
+    opacity: 0.9;
+  }
+  30%{
+    top: 39.5%;
+    left: 47%;
+    opacity: 0;
+  }
+  100%{
+    top: 39.5%;
+    left: 47%;
+    opacity: 0;
+  }
+}
+/* 
+* Main grid of the calculator. This is our working space for this project
+*/
+
+.body, html{
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.calculator-grid{
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-inline-size: 22rem;
+  overflow: hidden; 
+}
+
+/* This part adjusts the size of the calculator's visual screen */
+.japanese-multiplication-visual {
+  background: hsl(207, 11%, 15%);
+  color: hsl(255, 100%, 100%);
+  font-size: 2rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 0.75rem;
+  text-align:right;
+  height: 21rem;
+  position: relative;
+}
+
+/* Spoiler alert! This is the cat picture that will be used in the animation */
+.cat-pic {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
+  min-height: 80%;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 5%;
+  margin-top: 10px;
+}
+
+/* 
+* This part is for the visual representation of the Japanese multiplication process. 
+* Including the numbers and the curves that will be used in the animation,
+* as well as the numbers that will be used in the animation.
+*/
+
+/* Adjusting the lines depending on the inputs */
+.inp1-tens {
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+transform-origin: 50% 50%;
+transform: rotate(270deg);  
+opacity: 0%;
+animation: fadeInLines 1s ease forwards;
+}
+
+.inp1-ones{
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+transform-origin: 50% 50%;
+transform: rotate(90deg);
+opacity: 0%;
+animation: fadeInLines 1s ease forwards;
+
+}
+.inp2-tens {
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+transform-origin: 50% 50%;
+transform: rotate(0deg);
+opacity: 0%;
+animation: fadeInLines 1s ease forwards;
+
+}
+.inp2-ones{
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+border-radius: 4%;
+transform-origin: 50% 50%;
+transform: rotate(180deg);
+opacity: 0%;
+animation: fadeInLines 1s ease forwards;
+
+}
+
+/* Adjusting the divider curves depending on the inputs */
+.curve-right{
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+border-radius: 4%;
+transform-origin: 50% 50%;
+transform: rotate(0deg);
+opacity: 0%;
+animation: fadeIn 2s ease forwards;
+}
+.curve-left{
+position: absolute;
+top: 2%;
+left: 0%;
+transform: translate(-50%, -50%);
+max-width: 100%;
+max-height: 100%;
+border-radius: 4%;
+transform-origin: 50% 50%;
+transform: rotate(180deg);
+opacity: 0%;
+animation: fadeIn 2s ease forwards;
+}
+
+/* Adjusting the numbers that will correspond to the digits of the input numbers */
+.inp1-dig-one{
+position: absolute;
+top: -7%;
+left: 35%;
+color:rgba(241, 152, 241, 0.806);
+opacity: 0%;
+animation: fadeIn 1s ease forwards;
+}
+
+.inp1-dig-ten{
+position: absolute;
+top: 20%;
+left: 8%;
+color: #ef9700d1;
+opacity: 0%;
+animation: fadeIn 1s ease forwards;
+}
+.inp2-dig-one{
+position: absolute;
+top: 76%;
+left: 33%;
+color: #00d7f3c9;
+opacity: 0%;
+animation: fadeIn 1s ease forwards;
+}
+.inp2-dig-ten{
+position: absolute;
+top: 50.5%;
+left: 8%;
+color: rgb(127, 255, 133);
+opacity: 0%;
+animation: fadeIn 1s ease forwards;
+}
+
+/* Adjusting display of the pre-result numbers */
+.hundreds{
+position: absolute;
+top: 39.5%;
+left: 3%;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+animation: fadeIn 7s ease forwards infinite;
+}
+.tens{
+  position: absolute;
+  top: 38.4%;
+  left: 46.7%;
+  font-size: 0.95rem;
+  color: hsla(0, 0%, 100%, 0.954);
+  animation: fadeIn 7s ease forwards infinite;
+  }
+.ones{
+position: absolute;
+top: 39.5%;
+left: 92%;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+animation: fadeIn 7s ease forwards infinite;
+
+}
+.intersect-ones{
+position: absolute;
+animation: intersections-ones 7s ease forwards infinite;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+}
+
+.intersect-tens-bottom{
+position: absolute;
+animation: intersections-tens-bottom 7s ease forwards infinite;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+}
+
+.intersect-tens-top{
+position: absolute;
+animation: intersections-tens-top 7s ease forwards infinite;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+}
+
+.intersect-hundreds{
+position: absolute;
+animation: intersections-hundreds 7s ease forwards infinite;
+font-size: 0.95rem;
+color: hsla(0, 0%, 100%, 0.954);
+}
+
+
+/* Adjusting the display of the numbers that will be added to the bigger digits */
+.tens-plus{
+position: absolute;
+font-size: 0.74rem;
+opacity: 0%;
+animation: slideAndFadeInTens 7s ease forwards infinite;
+}
+
+.hundreds-plus{
+position: absolute;
+font-size: 0.7rem;
+opacity: 0%;
+animation: slideAndFadeInHundreds 7s ease forwards infinite;
+}
+
+/* Adjusting the animation of the numbers to the result area */
+.ones-to-result{
+  position: absolute;
+  font-size: 0.95rem;
+  color: hsla(0, 0%, 100%, 0.954);
+  animation: onesToResult 7s ease forwards infinite;
+}
+.tens-to-result{
+  position: absolute;
+  font-size: 0.95rem;
+  color: hsla(0, 0%, 100%, 0.954);
+  animation: tensToResult 7s ease forwards infinite;
+}
+.hundreds-to-result{
+  position: absolute;
+  font-size: 0.95rem;
+  color: hsla(0, 0%, 100%, 0.954);
+  animation: hundredsToResult 7s ease forwards infinite;
+}
+
+/* Adjusting the result area. This part also being used by prompts to the user */
+.numerical-result{
+  background: hsl(207, 11%, 15%);
+  color: hsla(0, 0%, 100%, 0.925);
+  font-size: 1rem;
+  padding-block-start: 0.3rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 0.5rem;
+  text-align: end;
+  height: 0.7rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+}
+
+/* Adjusting the input area. Displays the user input dynamically */
+.inputs{
+  background: hsl(207, 11%, 15%);
+  color: hsla(0, 0%, 100%, 0.836);
+  font-size: 1rem;
+  padding-block-start: 0.5rem;
+  text-align:left;
+  height: 1rem;
+  padding-inline-start: 0.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+}
+
+/*
+* Visualization part ends here. The rest is about the calculator's buttons and footer. 
+*/
+
+.calculator-buttons {
+  padding: 0.5rem; 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  grid-gap: 2px;
+  background: hsl(207, 11%, 15%);          
+}
+.calc-key {
+  background: hsl(206, 14%, 41%);
+  border: none;
+  font-size: 1.8rem;
+  inline-size: 70px;
+  block-size: 70px;
+  border-radius: 40px;
+  margin: 0.40rem;
+  color: hsl(255, 100%, 100%);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2) inset;
+  padding: 0.5rem;
+
+}
+
+.calc-key:hover{
+  background: hsl(206, 22%, 34%);
+}
+
+.calc-key:active{
+  background: hsl(206, 23%, 21%);
+}
+.calc-key:focus {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2) inset;
+  outline: none;
+}
+.calc-key-functional {
+  background: hsl(208, 25%, 86%);
+  color: rgba(0, 0, 0, 0.609)  
+}
+.calc-key-functional:hover {
+  background: hsl(208, 24%, 80%);
+}
+
+.calc-key-functional:active {
+  background: hsla(207, 29%, 73%, 0.727);
+}
+
+.calc-key-span-two {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  width: auto;
+}
+
+.calc-key-special{
+  background-color: hsla(0, 7%, 62%, 0.729);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.9) inset;
+}
+.calc-key-special:hover{
+  background: hsla(0, 7%, 62%, 0.659);
+}
+.calc-key-special:active{
+  background: hsla(0, 7%, 62%, 0.49);
+}
+
+.cat-button{
+background: hsla(357, 100%, 72%, 0.486);
+color: hsl(0, 0%, 100%);
+font-size: 1.8rem;
+inline-size: 70px;
+block-size: 70px;
+border-radius: 40px;
+margin: 0.40rem;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.9) inset;
+padding: 0.5rem;
+border: none;
+}
+.cat-button:hover{
+  background: hsla(357, 100%, 72%, 0.334);
+}
+.cat-button:active{
+  background: hsla(357, 100%, 72%, 0.2);
+}
+
+.calculator-footer{
+background: hsl(207, 11%, 15%);
+padding-block-start: 0.5rem;
+padding-block-end: 0.5rem;
+padding-inline-end: 0.75rem;
+height: 0.1rem;
+}
