@@ -40,6 +40,10 @@ To run as a desktop app:
 
 npm run electron:dev
 
+<span style="color: red">In case you get "prop-types" error, run this command:</span>
+npm install --save prop-types
+
+
 ## Built With
 
 This project is built with the following technologies:
