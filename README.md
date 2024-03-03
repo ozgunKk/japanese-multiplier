@@ -20,7 +20,7 @@ To install Visual Calculator For Japanese Multiplication Method, follow these st
 
 1. Clone the repository:
 
-git clone https://github.com/ozgunKk/JapaneseMultiplication/
+git clone https://github.com/ozgunKk/japanese-multiplier/
 
 2. Navigate to the project directory:
 
