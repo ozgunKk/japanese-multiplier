@@ -24,7 +24,7 @@ git clone https://github.com/ozgunKk/japanese-multiplier.git
 
 2. Navigate to the project directory:
 
-cd your-repo-name
+cd japanese-multiplier
 
 3. Install dependencies:
 
