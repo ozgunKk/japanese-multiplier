@@ -25,12 +25,12 @@ function Calculator() {
         if(isResultReady) return;
         if (isOperatorUsed) {
             setIsCat(false);
-            inp2.length == 2 ? displayMaxDigitsConstraint():setInp2(inp2 + e);
+            inp2.length == 2 ? displayMaxDigitsConstraint():setInp2(prevInp2 => prevInp2 + e);
             if(catClickCounter || result =='Please enter both numbers. More effort!' != 0)setResult(0);
             setCatClickCounter(0);
         } else {
             setIsCat(false);
-            inp1.length == 2 ? displayMaxDigitsConstraint():setInp1(inp1 + e);
+            inp1.length == 2 ? displayMaxDigitsConstraint():setInp1(prevInp1 => prevInp1 + e);
             if(catClickCounter || result =='Please enter both numbers. More effort!' != 0)setResult(0);
             setCatClickCounter(0);
         }
