@@ -20,7 +20,7 @@ To install Visual Calculator For Japanese Multiplication Method, follow these st
 
 1. Clone the repository:
 
-git clone https://github.com/ozgunKk/japanese-multiplier.git
+git clone https://github.com/ozgunKk/japanese-multiplier/
 
 2. Navigate to the project directory:
 
@@ -68,3 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
  Another thing the consider; even though I have experience with developing with React, I didn't have any prior experience with creating a desktop application from it. So I created a desktop app using Electron, but ı can't say that I'm so happy with the window that appears at the moment.
 
 ## Easter Eggs:
+1. An easter egg series with three different prompts and photoa can be seen after clicking the '猫' button. The user can either press to the '猫' button again or to the cat image to see the next prompt, until the third one that says 'Time for math!'. The user can start entering number anytime he/she wants without clicking any other number
+2. A cat appears to alert the user in case he/she tries to enter a number with more than 2 digits.
+3. If the user press the calculate button (=) without entering two of the required numbers, a cat will appear for warning.
+4. The last one is for my Turkish bro's! If the result is 333, you'll see another easter egg.
