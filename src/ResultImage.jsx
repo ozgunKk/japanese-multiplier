@@ -21,30 +21,40 @@ import g8 from './assets/calculation-visuals/green/8.png';
 import g9 from './assets/calculation-visuals/green/9.png';
 import blank from './assets/blank.png';
 
-function getOnesImage(number) {
+function getBlueImage(number) {
     const images = { '1': b1, '2': b2, '3': b3, '4': b4, '5': b5, '6': b6, '7': b7, '8': b8, '9': b9 };
     return images[number] || blank;
 }
-function getTensImage(number) {
+function getGreenImage(number) {
     const images = { '1': g1, '2': g2, '3': g3, '4': g4, '5': g5, '6': g6, '7': g7, '8': g8, '9': g9 };
     return images[number] || blank;
 }
 
 function ResultImage(props) {
-    const tens = getTensImage(props.tens);
-    const ones = getOnesImage(props.ones);
     const num2 = parseInt(props.tens + props.ones);
+    let ones, tens;
+    if(num2 > 9){
+        tens = getGreenImage(props.tens);
+        ones = getBlueImage(props.ones);
+    }else{
+        ones = getGreenImage(props.ones);
+        tens = blank;
+    }
 
     return (
         <div>
-            <img src={tens} alt="inp2-tens" className='inp2-tens color-mult' />
-            <img src={ones} alt="inp2-ones" className='inp2-ones color-mult'/>
-            {num2 < 10 ?
-                <h5 className='inp2-dig-one'>{num2 % 10}</h5> :
+            {num2 > 9 ?
                 <>
-                    {num2 / 10 != 0 ? <h5 className='inp2-dig-ten'>{Math.floor(num2 / 10)}</h5>:<></>}
-                    {num2 % 10 != 0 ? <h5 className='inp2-dig-one'>{num2 % 10}</h5>:<></>}
-                </>
+                <img src={tens} alt="inp2-tens" className='inp2-tens color-mult' />
+                <img src={ones} alt="inp2-ones" className='inp2-ones color-mult'/>
+                {num2 / 10 != 0 ? <h5 className='inp2-dig-ten'>{Math.floor(num2 / 10)}</h5>:<></>}
+                {num2 % 10 != 0 ? <h5 className='inp2-dig-one-bi'>{num2 % 10}</h5>:<></>}
+                </>:
+            num2 < 10 && num2 != 0?
+                <>
+                <img src={ones} alt="inp2-ones" className='inp2-ones color-mult'/>
+                <h5 className='inp2-dig-one-mono'>{num2 % 10}</h5>
+                </>:<></>
             }
         </div>
     );
