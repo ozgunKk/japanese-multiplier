@@ -121,7 +121,7 @@
   }
 }
 
-@keyframes hundredsToResult{
+@keyframes hundredsToResultBi{
   0%{
     top: 39.5%;
     left: 3%;
@@ -148,6 +148,34 @@
     opacity: 0;
   }
 }
+@keyframes hundredsToResultMono{
+  0%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0;
+  }
+  40%{
+    top: 39.5%;
+    left: 3%;
+    opacity: 0;
+  }
+  60%{
+    top: 50%;
+    left: 3%;
+    opacity: 0.9;
+  }
+  80%{
+    top: 87%;
+    left: 90.3%;
+    opacity: 0.9;
+  }
+  100%{
+    top: 93%;
+    left: 90.3%;
+    opacity: 0;
+  }
+}
+
 @keyframes intersections-ones{
   0%{
     top: 39.5%;
@@ -383,7 +411,7 @@ animation: fadeIn 2s ease forwards;
 }
 
 /* Adjusting the numbers that will correspond to the digits of the input numbers */
-.inp1-dig-one{
+.inp1-dig-one-bi{
 position: absolute;
 top: -7%;
 left: 35%;
@@ -391,7 +419,14 @@ color:rgba(241, 152, 241, 0.806);
 opacity: 0%;
 animation: fadeIn 1s ease forwards;
 }
-
+.inp1-dig-one-mono{
+  position: absolute;
+  top: -7%;
+  left: 35%;
+  color:#ef9700d1;
+  opacity: 0%;
+  animation: fadeIn 1s ease forwards;
+  }
 .inp1-dig-ten{
 position: absolute;
 top: 20%;
@@ -400,14 +435,22 @@ color: #ef9700d1;
 opacity: 0%;
 animation: fadeIn 1s ease forwards;
 }
-.inp2-dig-one{
+.inp2-dig-one-mono{
 position: absolute;
 top: 76%;
 left: 33%;
-color: #00d7f3c9;
+color: rgb(127, 255, 133);
 opacity: 0%;
 animation: fadeIn 1s ease forwards;
 }
+.inp2-dig-one-bi{
+  position: absolute;
+  top: 76%;
+  left: 33%;
+  color: #00d7f3c9;
+  opacity: 0%;
+  animation: fadeIn 1s ease forwards;
+  }
 .inp2-dig-ten{
 position: absolute;
 top: 50.5%;
@@ -500,11 +543,17 @@ animation: slideAndFadeInHundreds 7s ease forwards infinite;
   color: hsla(0, 0%, 100%, 0.954);
   animation: tensToResult 7s ease forwards infinite;
 }
-.hundreds-to-result{
+.hundreds-to-result-bi{
   position: absolute;
   font-size: 0.95rem;
   color: hsla(0, 0%, 100%, 0.954);
-  animation: hundredsToResult 7s ease forwards infinite;
+  animation: hundredsToResultBi 7s ease forwards infinite;
+}
+.hundreds-to-result-mono{
+  position: absolute;
+  font-size: 0.95rem;
+  color: hsla(0, 0%, 100%, 0.954);
+  animation: hundredsToResultMono 7s ease forwards infinite;
 }
 
 /* Adjusting the result area. This part also being used by prompts to the user */
